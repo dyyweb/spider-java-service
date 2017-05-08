@@ -52,16 +52,16 @@
                 <filtering>false</filtering>
             </resource>
             <resource>
-                <directory>src/main/resources/conf</directory>
-                <targetPath>conf</targetPath>
+                <directory>src/main/resources/config</directory>
+                <targetPath>config</targetPath>
                 <includes>
                     <include>**/*.xml</include>
                 </includes>
                 <filtering>true</filtering>
             </resource>
             <resource>
-                <directory>src/main/resources/conf/${conf.dir}</directory>
-                <targetPath>conf</targetPath>
+                <directory>src/main/resources/config/${conf.dir}</directory>
+                <targetPath>config</targetPath>
                 <includes>
                     <include>**/*.properties</include>
                 </includes>
@@ -89,6 +89,7 @@
                         </goals>
                         <configuration>
                             <finalName>${project.name}</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
                             <descriptors>
                                 <descriptor>assembly/assembly.xml</descriptor>
                             </descriptors>

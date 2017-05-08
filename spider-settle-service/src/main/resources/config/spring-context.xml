@@ -37,7 +37,7 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="configLocation" value="classpath:conf/mybatis.xml"/>
+		<property name="configLocation" value="classpath:config/mybatis.xml"/>
 		<property name="dataSource" ref="spider-bill-dsc"/>
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

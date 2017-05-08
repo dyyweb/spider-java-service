@@ -7,8 +7,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpiderSettleService {
     public static void main(String[] args) {
         try {
-            LogbackConfigurer.initLogging("classpath:conf/logback.xml");
-            new ClassPathXmlApplicationContext("classpath:conf/dubbo-settle-service.xml");
+            LogbackConfigurer.initLogging("classpath:config/logback.xml");
+            new ClassPathXmlApplicationContext("classpath:config/dubbo-settle-service.xml");
             System.out.println("***********服务启动成功***********");
             while (true) {
                 Thread.sleep(1000);
