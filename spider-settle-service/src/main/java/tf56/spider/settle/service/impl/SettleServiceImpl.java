@@ -16,11 +16,8 @@ import java.util.Date;
 @Service
 public class SettleServiceImpl implements SettleService{
     private static final Logger logger = LoggerFactory.getLogger(SettleServiceImpl.class);
-    @Transactional(rollbackFor = Exception.class)
-    public String doSeckill(String name, Date time) throws Exception {
+    public String doSeckill(String name, Date time) {
         logger.info("SettleService name："+name+", date："+ time);
-        int i = 1/0;
-        logger.info("================="+i);
         return "success by DY ,settleService 系统返回";
     }
 }
